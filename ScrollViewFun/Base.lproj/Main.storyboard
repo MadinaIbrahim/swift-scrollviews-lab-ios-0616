@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,13 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-zE-Ybh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p57-WZ-yZk" userLabel="Content Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="1875" height="667"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-91-NtL">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="DW5-Iz-RXu">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="CMe-Q5-RLw">
+                                                <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="86C-uI-iH7">
+                                                <rect key="frame" x="1125" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-jm-txM">
+                                                <rect key="frame" x="1500" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="p57-WZ-yZk" secondAttribute="trailing" id="U7n-wL-CVh"/>
+                                    <constraint firstAttribute="bottom" secondItem="p57-WZ-yZk" secondAttribute="bottom" id="XzI-sX-pn9"/>
+                                    <constraint firstItem="p57-WZ-yZk" firstAttribute="height" secondItem="Kgo-zE-Ybh" secondAttribute="height" id="Y0x-oG-aFC"/>
+                                    <constraint firstItem="p57-WZ-yZk" firstAttribute="leading" secondItem="Kgo-zE-Ybh" secondAttribute="leading" id="afn-mk-Ipu"/>
+                                    <constraint firstItem="p57-WZ-yZk" firstAttribute="top" secondItem="Kgo-zE-Ybh" secondAttribute="top" id="wS0-3T-GCM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kgo-zE-Ybh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="01Q-R7-oTb"/>
+                            <constraint firstItem="Kgo-zE-Ybh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6m7-fe-XrY"/>
+                            <constraint firstItem="p57-WZ-yZk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="5" id="QCH-Ow-puD"/>
+                            <constraint firstItem="Kgo-zE-Ybh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mxW-uS-b4r"/>
+                            <constraint firstItem="Kgo-zE-Ybh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nLT-in-4TP"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="281.5" y="396.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
